@@ -14,5 +14,11 @@
 */
 
 $router->get('/', function () use ($router) {
-    return $router->app->version();
+    return get_frontend_view('welcome');
 });
+
+$router->get('/text-tool/convert-blank-space-to-break-line', 'TextToolController@convertBlankSpaceToBreakLine');
+$router->post('/text-tool/convert-blank-space-to-break-line', 'TextToolController@convertBlankSpaceToBreakLine');
+
+$router->get('/text-tool/convert-break-line-to-blank-space', 'TextToolController@convertBreakLineToBlankSpace');
+$router->post('/text-tool/convert-break-line-to-blank-space', 'TextToolController@convertBreakLineToBlankSpace');

@@ -1,0 +1,16 @@
+@import "fonts";
+
+#app {
+  font-family: "Be Vietnam", sans-serif, "Times New Roman";
+}
+
+.menu-bar {
+  ul.list-group {
+    li.list-group-item {
+      &:hover {
+        background-color: darken(#fff, 5%);
+        cursor: pointer;
+      }
+    }
+  }
+}
