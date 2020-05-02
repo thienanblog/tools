@@ -17,8 +17,16 @@ $router->get('/', function () use ($router) {
     return get_frontend_view('welcome');
 });
 
+
+// String
 $router->get('/text-tool/convert-blank-space-to-break-line', 'TextToolController@convertBlankSpaceToBreakLine');
 $router->post('/text-tool/convert-blank-space-to-break-line', 'TextToolController@convertBlankSpaceToBreakLine');
 
 $router->get('/text-tool/convert-break-line-to-blank-space', 'TextToolController@convertBreakLineToBlankSpace');
 $router->post('/text-tool/convert-break-line-to-blank-space', 'TextToolController@convertBreakLineToBlankSpace');
+
+$router->get('/text-tool/count-chars', 'TextToolController@countChars');
+$router->post('/text-tool/count-chars', 'TextToolController@countChars');
+
+$router->get('/text-tool/convert-chars', 'TextToolController@convertChars');
+$router->post('/text-tool/convert-chars', 'TextToolController@convertChars');

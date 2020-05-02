@@ -43,6 +43,35 @@ class TextToolController extends Controller
     }
 
     public function countChars() {
+        $result = 0;
 
+        // Counting characters will not trimmed anything
+        if ($content = request()->input('content')) {
+            $result = mb_strlen($content, 'UTF-8');
+        }
+
+        return get_frontend_view('text-tool.convert-break-line-to-blank-space', ['result' => $result]);
+    }
+
+    public function convertChars() {
+        $result = '';
+        $mode = request()->input('mode', 'uppercase');
+
+        // Counting characters will not trimmed anything
+        if ($content = trim(request()->input('content'))) {
+            switch ($mode) {
+                case 'uppercase':
+                    $result = mb_strtoupper($content, 'UTF-8');
+                    break;
+                case 'lowercase':
+                    $result = mb_strtolower($content, 'UTF-8');
+                    break;
+                case 'capitalize':
+                    $result = ucwords($content);
+                    break;
+            }
+        }
+
+        return get_frontend_view('text-tool.convert-chars', ['result' => $result]);
     }
 }

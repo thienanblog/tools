@@ -73,8 +73,8 @@
                                     <a class="dropdown-item" href="{{ url('/text-tool/convert-blank-space-to-break-line') }}">Chuyển đổi khoảng cách thành xuống dòng</a>
                                     <a class="dropdown-item" href="{{ url('/text-tool/convert-break-line-to-blank-space') }}">Chuyển đổi xuống dòng thành khoảng cách</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Đếm ký tự</a>
-                                    <a class="dropdown-item" href="#">Chuyển đổi ký tự (Hoa/Thường/Kết hợp)</a>
+                                    <a class="dropdown-item" href="{{ url('/text-tool/count-chars') }}">Đếm ký tự</a>
+                                    <a class="dropdown-item" href="{{ url('/text-tool/convert-chars') }}">Chuyển đổi ký tự (Hoa/Thường/Kết hợp)</a>
                                 </div>
                             </li>
                             <li class="list-group-item dropright">
