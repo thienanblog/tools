@@ -1,4 +1,7 @@
 @extends(get_frontend_view_path('layout'))
+@section('title')
+    Chuyển đổi khoảng cách thành xuống dòng
+@endsection
 @section('content')
     <form method="post">
         <fieldset>

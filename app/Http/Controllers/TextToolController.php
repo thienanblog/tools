@@ -50,7 +50,7 @@ class TextToolController extends Controller
             $result = mb_strlen($content, 'UTF-8');
         }
 
-        return get_frontend_view('text-tool.convert-break-line-to-blank-space', ['result' => $result]);
+        return get_frontend_view('text-tool.count-chars', ['result' => $result]);
     }
 
     public function convertChars() {

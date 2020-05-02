@@ -5,7 +5,11 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Công cụ cho mọi người</title>
+    <title>
+        @section('title')
+            Công cụ cho mọi người
+        @show
+    </title>
     <link rel="stylesheet" href="{{ get_frontend_asset('assets/css/bootstrap.min.css') }}">
     <link rel="stylesheet" href="{{ get_frontend_asset('assets/css/style.css') }}">
 </head>
@@ -83,11 +87,11 @@
                                     Mã hóa và giải mã
                                 </div>
                                 <div class="dropdown-menu">
-                                    <a class="dropdown-item" href="#">Chuyển đổi văn bản thành Base64</a>
-                                    <a class="dropdown-item" href="#">Chuyển đổi Base64 thành văn bản</a>
+                                    <a class="dropdown-item" href="{{ url('/encrypt-tool/convert-text-to-base64') }}">Chuyển đổi văn bản thành Base64</a>
+                                    <a class="dropdown-item" href="{{ url('/encrypt-tool/convert-base64-to-text') }}">Chuyển đổi Base64 thành văn bản</a>
                                     <div class="dropdown-divider"></div>
-                                    <a class="dropdown-item" href="#">Chuyển đổi văn bản thành Hex</a>
-                                    <a class="dropdown-item" href="#">Chuyển đổi Hex thành văn bản</a>
+                                    <a class="dropdown-item" href="{{ url('/encrypt-tool/convert-text-to-hex') }}">Chuyển đổi văn bản thành Hex</a>
+                                    <a class="dropdown-item" href="{{ url('/encrypt-tool/convert-hex-to-text') }}">Chuyển đổi Hex thành văn bản</a>
                                 </div>
                             </li>
                         </ul>
@@ -95,6 +99,7 @@
                 </div>
                 <div class="col-lg-9">
                     <div class="page-content card">
+                        <div class="card-header">@yield('title')</div>
                         <div class="card-body">
                             @yield('content')
                         </div>
