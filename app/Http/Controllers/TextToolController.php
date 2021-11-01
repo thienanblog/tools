@@ -67,7 +67,7 @@ class TextToolController extends Controller
                     $result = mb_strtolower($content, 'UTF-8');
                     break;
                 case 'capitalize':
-                    $result = ucwords($content);
+                    $result = ucwords(mb_strtolower($content));
                     break;
             }
         }

@@ -8,9 +8,9 @@
             <div class="form-group">
                 <label for="mode">Kiểu chuyển đổi</label>
                 <select class="form-control" id="mode" name="mode">
-                    <option {{ request()->input('uppercase') ? 'selected' : '' }} value="uppercase">CHỮ IN HOA</option>
-                    <option {{ request()->input('lowercase') ? 'selected' : '' }} value="lowercase">chữ thường</option>
-                    <option {{ request()->input('capitalize') ? 'selected' : '' }} value="capitalize">In Hoa Mỗi Ký Tự Đầu Trong Từ</option>
+                    <option {{ request()->input('mode') == 'uppercase' ? 'selected' : '' }} value="uppercase">CHỮ IN HOA</option>
+                    <option {{ request()->input('mode') == 'lowercase' ? 'selected' : '' }} value="lowercase">chữ thường</option>
+                    <option {{ request()->input('mode') == 'capitalize' ? 'selected' : '' }} value="capitalize">In Hoa Mỗi Ký Tự Đầu Trong Từ</option>
                 </select>
             </div>
             <div class="form-group">
